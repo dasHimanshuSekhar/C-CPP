@@ -4,6 +4,8 @@ using namespace std;
 int main(){
 	char *arr, *stackArr;
 	int arrSize, top = -1;
+	cout << "!!e.g \n(A+B) means 5 symbols::\n";
+	cout << "enter the size of SYMBOLS you're going to put:";
 	cin >> arrSize;
 	arr = (char *)malloc(arrSize * sizeof(int));
 	stackArr = (char *)malloc(arrSize * sizeof(int));
@@ -108,9 +110,8 @@ int main(){
 		}
 		else
 		{
-			if(i < arrSize){
+			if(i < arrSize)
 				continue;
-			}
 			else
 				break;
 		}
