@@ -108,7 +108,11 @@ int main(){
 		}
 		else
 		{
-			break;
+			if(i < arrSize){
+				continue;
+			}
+			else
+				break;
 		}
 
 	}
