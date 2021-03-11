@@ -4,6 +4,8 @@
 int *stackArr = NULL;
 int top = -1;
 int stackSize;
+char command[10], intro[]="Commands:\n\t1>Push >> For INSERTING an element\n\t2>Pop >>For REMOVE an element\n\t3>Peek >>For ACCESS the last element\n\t4>Size >>For number of STORED element\n\t5>IsEmptyStack >>To know whether stack is EMPTY\n\t6>IsFullStack >>To know whether the stack is FULL\n\t7>Display >>To DISPLAY all the stored element\n\t8>command >>To see the all COMMANDS\n\t9>exit >>Destroy the STACK or EXIT from the program\n\t10>cls >>Clear the screen\n\nThese all commands are case-sensitive !!\n\n";
+char banner[]="\t\t\t\t\t\t\t\t\t-----!!!!STACK!!!!-----\n";
 void Push(void );
 void DisplayStack(void );
 void Pop(void );
@@ -11,11 +13,7 @@ void Peek(void );
 void Size(void );
 int IsEmptyStack(void );
 int IsFullStack(void );
-int main(){
-	char command[10], intro[]="Commands:\n\t1>Push >> For INSERTING an element\n\t2>Pop >>For REMOVE an element\n\t3>Peek >>For ACCESS the last element\n\t4>Size >>For number of STORED element\n\t5>IsEmptyStack >>To know whether stack is EMPTY\n\t6>IsFullStack >>To know whether the stack is FULL\n\t7>Display >>To DISPLAY all the stored element\n\t8>command >>To see the all COMMANDS\n\t9>exit >>Destroy the STACK or EXIT from the program\n\t10>cls >>Clear the screen\n\nThese all commands are case-sensitive !!\n\n";
-	char banner[]="\t\t\t\t\t\t\t\t\t-----!!!!STACK!!!!-----\n";
-	printf("%s", banner);
-	printf("%s", intro);
+void stack (void ){
 	printf("Enter the size of the stack:\n>>");
 	scanf("%d",&stackSize);
 	stackArr = (int *) malloc(stackSize * (sizeof(int)));
@@ -68,6 +66,14 @@ int main(){
 			}
 		}
 	}
+
+}
+//driver code
+int main(){
+	
+	printf("%s", banner);
+	printf("%s", intro);
+	stack();
 	return 0;
 }
 void Push(){
